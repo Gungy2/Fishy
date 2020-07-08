@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image:url(./water.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+
+#title {
+  font-family: 'Denk One', sans-serif;
+  text-align: center;
+  font-size: 7em;
+  font-style: italic;
+  letter-spacing: 0.2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+main {
+  margin: auto;
+  width: 90%;
+  
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  align-items: flex-start;
+}
+
+.fish-section {
+  padding: 1em;
+  margin: 2em;
+  background-color: #A5B2C480;
+  border-radius: 10%;
+  margin-bottom: 3em;
+}
+
+.fish-section:hover {
+  background-color: #A5B2C4FF;
+}
+
+.fish-section > h2 {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-size: 2em;
+  text-align: center;
+}
+
+.fish-section > h3 {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 400px;
+  margin-top: 0;
+  margin-bottom: 2em;
+  font-size: 1em;
+  color: rgb(100, 100, 100);
+  text-align: center;
+}
+
+.fish-section > img {
+  width: 300px;
+  display: block;
+  margin: 10px auto 10px;
+}

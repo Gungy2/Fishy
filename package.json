@@ -1,0 +1,36 @@
+{
+  "name": "fishy",
+  "version": "0.1.0",
+  "description": "Website showing species of fish",
+  "main": "index.html",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "format": "prettier \"src/**/*.{js,html}\" --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gungy2/Fishy.git"
+  },
+  "author": "George Ungureanu Vranceanu",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/Gungy2/Fishy/issues"
+  },
+  "homepage": "https://github.com/Gungy2/Fishy#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.3",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
