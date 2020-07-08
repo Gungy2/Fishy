@@ -21,6 +21,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Hind Siliguri', sans-serif;
 }
 
+#main-div {
+  margin: auto;
+  width: 98vw;
+}
+
 main {
   margin: auto;
   width: 90%;
@@ -29,6 +34,21 @@ main {
   justify-content: space-evenly;
   flex-flow: row wrap;
   align-items: flex-start;
+}
+
+#mainForm {
+  text-align: center;
+  flex-basis: 100%;
+  margin-bottom: 2em;
+}
+
+#fishName {
+  width: 500px;
+  max-width: 100%;
+  font-size: 2em;
+  background-color: #A5B2C480;
+  padding: 0.2em 0.5em;
+  border-radius: 20px;
 }
 
 .fish-section {

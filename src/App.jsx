@@ -3,11 +3,12 @@ import { render } from "react-dom";
 import AllFish from "./AllFish.jsx";
 
 function App() {
+
   return (
-    <main>
+    <div id="main-div">
       <h1 id="title">FiFish</h1>
       <AllFish />
-    </main>
+    </div>
   );
 }
 
