@@ -5,6 +5,7 @@ function AllFish() {
   const [fish, setFish] = useState([]);
   const [name, setName] = useState("");
   const [currFish, setCurrFish] = useState([]);
+  const [minProt, setMinProt] = useState(10);
 
   useEffect(() => {
     const otherUrl =
@@ -17,6 +18,16 @@ function AllFish() {
         setCurrFish(noDuplicates);
       });
   }, []);
+
+  useEffect(() => {
+    setCurrFish(
+      fish
+        .filter((fish) =>
+          fish["Species Name"].toLowerCase().includes(name.toLowerCase())
+        )
+        .filter((fish) => parseFloat(fish["Protein"]) > minProt)
+    );
+  }, [name, minProt, setName, setMinProt]);
 
   function eliminateDuplicates(array) {
     array.sort((first, second) =>
@@ -44,18 +55,23 @@ function AllFish() {
           value={name}
           onChange={(e) => {
             setName(e.target.value);
-            if (name !== "") {
-              const filteredFish = fish.filter((fish) => {
-                return fish["Species Name"]
-                  .toLowerCase()
-                  .includes(name.toLocaleLowerCase());
-              });
-              setCurrFish(filteredFish);
-            } else {
-              setCurrFish(fish);
-            }
           }}
         />
+        <label htmlFor="proteinSlider">
+          Min Protein Count
+          <input
+            type="range"
+            onChange={(e) => {
+              setMinProt(e.target.value);
+            }}
+            min="10"
+            max="30"
+            value={minProt}
+            className="slider"
+            id="proteinSlider"
+          ></input>
+          {minProt}g
+        </label>
       </form>
       {currFish.map((fish) => (
         <Fish key={fish["Scientific Name"]} species={fish} />

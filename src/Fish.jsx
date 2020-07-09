@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "@reach/router";
 
 function Fish({
   species: {
@@ -8,11 +9,11 @@ function Fish({
   },
 }) {
   return (
-    <section className="fish-section">
+    <Link to={"species/" + name.toLowerCase().replace(/ /g, "-")} className="fish-section">
       <h2>{name}</h2>
       <h3>{scName}</h3>
       <img className="fish-img" src={media.src} alt={media.alt} />
-    </section>
+    </Link>
   );
 }
 
