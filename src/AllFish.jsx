@@ -1,21 +1,24 @@
 import React, { useState, useEffect } from "react";
 import Fish from "./Fish.jsx";
+import Loading from "./Loading.jsx";
 
 function AllFish() {
+  const [loading, setLoading] = useState(true);
   const [fish, setFish] = useState([]);
   const [name, setName] = useState("");
   const [currFish, setCurrFish] = useState([]);
   const [minProt, setMinProt] = useState(10);
 
   useEffect(() => {
-    const otherUrl =
+    const url =
       "https://cors-anywhere.herokuapp.com/https://www.fishwatch.gov/api/species";
-    fetch(otherUrl)
+    fetch(url)
       .then((response) => response.json())
       .then((data) => {
         const noDuplicates = eliminateDuplicates(data);
         setFish(noDuplicates);
         setCurrFish(noDuplicates);
+        setLoading(false);
       });
   }, []);
 
@@ -45,8 +48,11 @@ function AllFish() {
     return newArray;
   }
 
+  if (loading) {
+    return <Loading />;
+  }
   return (
-    <main>
+    <main id="allFish">
       <form id="mainForm">
         <input
           type="text"

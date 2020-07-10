@@ -1,9 +1,11 @@
 {
-  "name": "fishy",
+  "name": "fifish",
   "version": "0.1.0",
   "description": "Website showing species of fish",
   "main": "index.html",
   "scripts": {
+    "clean": "rm -rf dist/ .cache/",
+    "build": "parcel build src/index.html",
     "dev": "parcel src/index.html",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "format": "prettier \"src/**/*.{js,html}\" --write",
@@ -11,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Gungy2/Fishy.git"
+    "url": "git+https://github.com/Gungy2/FiFish.git"
   },
   "author": "George Ungureanu Vranceanu",
-  "license": "GNU",
+  "license": "GPL-3.0 License",
   "bugs": {
-    "url": "https://github.com/Gungy2/Fishy/issues"
+    "url": "https://github.com/Gungy2/FiFish/issues"
   },
-  "homepage": "https://github.com/Gungy2/Fishy#readme",
+  "homepage": "http://gungy2.github.io/FiFish",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.4.0",
@@ -32,7 +34,6 @@
   "dependencies": {
     "@reach/router": "^1.3.4",
     "react": "^16.13.1",
-    "react-compound-slider": "^2.5.0",
     "react-dom": "^16.13.1"
   }
 }

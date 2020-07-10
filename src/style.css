@@ -3,22 +3,27 @@
 }
 
 body {
-  background-image:url(./water.jpg);
+  background-image: url(./water.jpg);
   background-attachment: fixed;
   background-size: cover;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 #title {
-  font-family: 'Denk One', sans-serif;
+  font-family: "Denk One", sans-serif;
   text-align: center;
   font-size: 7em;
   font-style: italic;
   letter-spacing: 0.2em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Hind Siliguri', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Hind Siliguri", sans-serif;
 }
 
 #main-div {
@@ -26,10 +31,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 98vw;
 }
 
-main {
+#allFish {
   margin: auto;
   width: 90%;
-  
+
   display: flex;
   justify-content: space-evenly;
   flex-flow: row wrap;
@@ -50,7 +55,7 @@ main {
   width: 500px;
   max-width: 80%;
   font-size: 2em;
-  background-color: #A5B2C480;
+  background-color: #a5b2c480;
   padding: 0.2em 0.5em;
   border-radius: 20px;
 }
@@ -103,13 +108,13 @@ main {
   height: 8.4px;
   cursor: pointer;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: #A5B2C480;
+  background: #a5b2c480;
   border-radius: 3px;
   border: 0.2px solid #010101;
 }
 
 #proteinSlider:hover::-webkit-slider-runnable-track {
-  background: #A5B2C4FF;
+  background: #a5b2c4ff;
 }
 
 #proteinSlider::-webkit-slider-runnable-track {
@@ -117,13 +122,13 @@ main {
   height: 8.4px;
   cursor: pointer;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: #A5B2C480;
+  background: #a5b2c480;
   border-radius: 3px;
   border: 0.2px solid #010101;
 }
 
 #proteinSlider:hover::-webkit-slider-runnable-track {
-  background: #A5B2C4FF;
+  background: #a5b2c4ff;
 }
 
 /******************************************************/
@@ -131,14 +136,14 @@ main {
 .fish-section {
   padding: 1em;
   margin: 2em;
-  background-color: #A5B2C480;
+  background-color: #a5b2c480;
   border-radius: 10%;
   margin-bottom: 3em;
   text-decoration: none;
 }
 
 .fish-section:hover {
-  background-color: #A5B2C4FF;
+  background-color: #a5b2c4ff;
 }
 
 .fish-section > h2 {
@@ -165,4 +170,38 @@ main {
   width: 300px;
   display: block;
   margin: 10px auto 10px;
+}
+
+/************************************************/
+
+#loading {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+@keyframes swim {
+  0% {
+    left: 0;
+  }
+
+  25% {
+    left: 150px;
+  }
+
+  75% {
+    left: -150px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+#fishLogo {
+  width: 100px;
+  position: relative;
+  animation-name: swim;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
