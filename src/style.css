@@ -6,7 +6,7 @@ body {
   background-image: url(./water.jpg);
   background-attachment: fixed;
   background-size: cover;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   letter-spacing: 0.1em;
 }
 
@@ -220,9 +220,10 @@ h6 {
 
 #details-main {
   width: 90%;
-  margin: auto;
+  margin: 0 auto 2em;
+  padding-bottom: 2em;
   background-color: #a5b2c4a0;
-  border-radius: 1em;
+  border-radius: 2em;
   text-align: center;
 }
 
@@ -246,7 +247,6 @@ h6 {
   font-style: italic;
 }
 
-
 #details-img {
   padding: 2em;
   width: 50%;
@@ -254,21 +254,19 @@ h6 {
 }
 
 #details-main > article {
+  padding: 0 1em 0;
   font-size: 1.5em;
   text-align: left;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
 }
 
-#details-main > article > h5 {
-  margin: 0;
+#details-main h5 {
+  margin: 0 1em 0;
   font-size: 1.5em;
-}
-
-#details-main > article > p {
-  padding: 0 1em 1em;
 }
 
 #details-main ul {
+  padding: 0;
   list-style-image: url(./favicon.ico);
   list-style-position: inside;
 }
@@ -277,7 +275,25 @@ h6 {
   margin: 0;
   border: 0;
   height: 2px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+#details-main button {
+  background-color: inherit;
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  width: fit-content;
+}
+
+#details-main button > h5 {
+  margin: 0;
 }
 
 #close {

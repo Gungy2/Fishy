@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "clean": "rm -rf dist/ .cache/",
-    "build": "parcel build src/index.html",
+    "build": "parcel build src/index.html --out-dir docs",
     "dev": "parcel src/index.html",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "format": "prettier \"src/**/*.{js,html}\" --write",

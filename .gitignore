@@ -2,5 +2,6 @@ node_modules/
 .cache/
 coverage/
 dist/
+docs/
 .vscode/
 .env/
