@@ -24,11 +24,20 @@ function Details({ name }) {
     <main id="details-main">
       <h2>{fish["Species Name"]}</h2>
       <h3>{fish["Scientific Name"]}</h3>
-      <img
-        className="details-img"
-        src={fish["Species Illustration Photo"].src}
-        alt={fish["Species Illustration Photo"].alt}
-      />
+      <h4>
+        {fish["Species Aliases"].replace(/(<.*?>)/g, "").replace(/,/g, " •")}
+      </h4>
+      <article>
+        <img
+          id="details-img"
+          src={fish["Species Illustration Photo"].src}
+          alt={fish["Species Illustration Photo"].alt}
+        />
+        <h5>Physical Appearance</h5>
+        <hr />
+        <p dangerouslySetInnerHTML={{ __html: fish["Physical Description"] }} />
+        <div id="close"></div>
+      </article>
     </main>
   );
 }

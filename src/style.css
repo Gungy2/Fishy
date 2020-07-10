@@ -6,15 +6,19 @@ body {
   background-image: url(./water.jpg);
   background-attachment: fixed;
   background-size: cover;
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 0.1em;
 }
 
 #title {
   font-family: "Denk One", sans-serif;
+  text-decoration: none;
   text-align: center;
   font-size: 7em;
   font-style: italic;
   letter-spacing: 0.2em;
+  color: black;
+  margin: 0.5em;
 }
 
 h1,
@@ -29,6 +33,8 @@ h6 {
 #main-div {
   margin: auto;
   width: 98vw;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 #allFish {
@@ -143,7 +149,7 @@ h6 {
 }
 
 .fish-section:hover {
-  background-color: #a5b2c4ff;
+  background-color: #a5b2c4;
 }
 
 .fish-section > h2 {
@@ -172,12 +178,16 @@ h6 {
   margin: 10px auto 10px;
 }
 
-/************************************************/
+/******************************************************/
 
 #loading {
   margin: auto;
   width: 50%;
   text-align: center;
+}
+
+#loading > h2 {
+  font-size: 3em;
 }
 
 @keyframes swim {
@@ -186,11 +196,11 @@ h6 {
   }
 
   25% {
-    left: 150px;
+    left: 200px;
   }
 
   75% {
-    left: -150px;
+    left: -200px;
   }
 
   100% {
@@ -198,10 +208,78 @@ h6 {
   }
 }
 
-#fishLogo {
-  width: 100px;
+#loading > svg {
+  width: 200px;
   position: relative;
   animation-name: swim;
   animation-duration: 3s;
   animation-iteration-count: infinite;
+}
+
+/******************************************************/
+
+#details-main {
+  width: 90%;
+  margin: auto;
+  background-color: #a5b2c4a0;
+  border-radius: 1em;
+  text-align: center;
+}
+
+#details-main > h2 {
+  margin: 0;
+  padding-top: 1em;
+  font-size: 3.5em;
+  font-style: italic;
+}
+
+#details-main > h3 {
+  margin: 0;
+  font-size: 2em;
+  color: rgb(100, 100, 100);
+  font-style: italic;
+}
+
+#details-main > h4 {
+  margin-top: 0.5em;
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+
+#details-img {
+  padding: 2em;
+  width: 50%;
+  float: left;
+}
+
+#details-main > article {
+  font-size: 1.5em;
+  text-align: left;
+  font-family: 'Roboto Slab', serif;
+}
+
+#details-main > article > h5 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+#details-main > article > p {
+  padding: 0 1em 1em;
+}
+
+#details-main ul {
+  list-style-image: url(./favicon.ico);
+  list-style-position: inside;
+}
+
+#details-main hr {
+  margin: 0;
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+}
+
+#close {
+  clear: both;
 }
