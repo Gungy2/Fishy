@@ -14,6 +14,7 @@ body {
   background-size: cover;
   font-family: "Roboto Slab", serif;
   letter-spacing: 0.1em;
+  min-width: fit-content;
 }
 
 footer {
@@ -78,7 +79,7 @@ h6 {
 
 #fishName {
   width: 500px;
-  max-width: 80%;
+  max-width: 60%;
   font-size: 2em;
   background-color: #a5b2c480;
   padding: 0.2em 0.5em;
@@ -91,13 +92,14 @@ h6 {
   margin-top: 1em;
   font-size: 2em;
   font-weight: 700;
+  max-width: 70%;
 }
 
 #proteinSlider {
   -webkit-appearance: none;
   flex-basis: 100%;
   width: 300px;
-  max-width: 50%;
+  max-width: 30%;
   margin-left: 2em;
   margin-right: 2em;
   position: relative;
@@ -192,6 +194,7 @@ h6 {
 }
 
 .fish-section > img {
+  max-width: 70%;
   width: 300px;
   display: block;
   margin: 10px auto 10px;
@@ -356,4 +359,24 @@ h6 {
 
 #close {
   clear: both;
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    bottom: 0;
+    font-size: 1em;
+  }
+
+  #title {
+    font-size: 4.5em;
+  }
+
+  #fishName {
+    font-size: 1.5em;
+  }
+
+  #mainForm > label {
+    font-size: 1.5em;
+  }
+
 }

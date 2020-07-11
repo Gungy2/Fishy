@@ -9,7 +9,7 @@ function Fish({
   },
 }) {
   return (
-    <Link to={"species/" + name.toLowerCase().replace(/ /g, "-")} className="fish-section">
+    <Link to={"/species/" + name.toLowerCase().replace(/ /g, "-")} className="fish-section">
       <h2>{name}</h2>
       <h3>{scName}</h3>
       <img className="fish-img" src={media.src} alt={media.alt} />

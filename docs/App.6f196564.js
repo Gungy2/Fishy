@@ -30976,7 +30976,7 @@ function Fish(_ref) {
       scName = _ref$species["Scientific Name"],
       media = _ref$species["Species Illustration Photo"];
   return /*#__PURE__*/_react.default.createElement(_router.Link, {
-    to: "species/" + name.toLowerCase().replace(/ /g, "-"),
+    to: "/species/" + name.toLowerCase().replace(/ /g, "-"),
     className: "fish-section"
   }, /*#__PURE__*/_react.default.createElement("h2", null, name), /*#__PURE__*/_react.default.createElement("h3", null, scName), /*#__PURE__*/_react.default.createElement("img", {
     className: "fish-img",
@@ -31390,7 +31390,7 @@ function App() {
     to: "/",
     id: "title"
   }, "FiFish"), /*#__PURE__*/_react.default.createElement(_router.Router, null, /*#__PURE__*/_react.default.createElement(_Details.default, {
-    path: "species/:name"
+    path: "/species/:name"
   }), /*#__PURE__*/_react.default.createElement(_AllFish.default, {
     path: "/"
   })), /*#__PURE__*/_react.default.createElement("footer", null, "\xA9 George Ungureanu Vranceanu. Made with FishWatch.gov API"));
@@ -31425,7 +31425,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39439" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37223" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

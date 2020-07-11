@@ -38,7 +38,7 @@ function Details({ name }) {
   return (
     <main id="details-main">
       <div id="back-container">
-        <Link id="back" to="/FiFish">
+        <Link id="back" to="/">
           &lt;Back
         </Link>
       </div>
