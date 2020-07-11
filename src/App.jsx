@@ -14,6 +14,9 @@ function App() {
         <Details path="species/:name" />
         <AllFish path="/" />
       </Router>
+      <footer>
+        © George Ungureanu Vranceanu. Made with FishWatch.gov API
+      </footer>
     </div>
   );
 }

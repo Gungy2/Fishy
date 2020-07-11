@@ -2,12 +2,28 @@
   box-sizing: border-box;
 }
 
+#root {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
 body {
   background-image: url(./water.jpg);
   background-attachment: fixed;
   background-size: cover;
   font-family: "Roboto Slab", serif;
   letter-spacing: 0.1em;
+}
+
+footer {
+  padding: 0 2em 0;
+  font-size: 1.5em;
+  font-weight: 700;
+  position: absolute;
+  width: 100%;
+  bottom: 0.5em;
+  text-align: center;
 }
 
 #title {
@@ -31,14 +47,17 @@ h6 {
 }
 
 #main-div {
+  position: relative;
   margin: auto;
-  width: 98vw;
   display: flex;
   flex-flow: column nowrap;
+  min-height: 98vh;
+  width: 100%;
 }
 
 #allFish {
   margin: auto;
+  margin-bottom: 1em;
   width: 90%;
 
   display: flex;
@@ -220,29 +239,45 @@ h6 {
 
 #details-main {
   width: 90%;
-  margin: 0 auto 2em;
+  margin: 0 auto 4em;
   padding-bottom: 2em;
   background-color: #a5b2c4a0;
   border-radius: 2em;
   text-align: center;
 }
 
-#details-main > h2 {
-  margin: 0;
+#back-container {
   padding-top: 1em;
-  font-size: 3.5em;
+  padding-left: 2em;
+  text-align: left;
+  font-weight: 700;
+}
+
+#back {
+  font-size: 2em;
+  color: black;
+  text-decoration: none;
+}
+
+#back:hover {
+  text-decoration: underline;
+}
+
+#details-main > h2 {
+  margin: -0.5em 0 0;
+  font-size: 4em;
   font-style: italic;
 }
 
 #details-main > h3 {
-  margin: 0;
+  margin: 0 2em 0;
   font-size: 2em;
   color: rgb(100, 100, 100);
   font-style: italic;
 }
 
 #details-main > h4 {
-  margin-top: 0.5em;
+  margin: 0.5em 2em 0;
   font-size: 1.5em;
   font-style: italic;
 }
@@ -250,11 +285,11 @@ h6 {
 #details-img {
   padding: 2em;
   width: 50%;
-  float: left;
+  float: right;
 }
 
 #details-main > article {
-  padding: 0 1em 0;
+  padding: 0 3em 0;
   font-size: 1.5em;
   text-align: left;
   font-family: "Roboto Slab", serif;
@@ -294,6 +329,29 @@ h6 {
 
 #details-main button > h5 {
   margin: 0;
+}
+
+#details-nutrition {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+#details-nutrition > li {
+  margin: 0 2em 1em;
+  width: fit-content;
+}
+
+.details-gallery {
+  margin: 2em 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.details-gallery > img {
+  max-width: 50%;
+  border-radius: 1em;
+  margin-right: 2em;
 }
 
 #close {
