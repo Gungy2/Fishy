@@ -1,0 +1,362 @@
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+body {
+  background-image: url(/water.a2752b90.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Roboto Slab", serif;
+  letter-spacing: 0.1em;
+}
+
+footer {
+  padding: 0 2em 0;
+  font-size: 1.5em;
+  font-weight: 700;
+  position: absolute;
+  width: 100%;
+  bottom: 0.5em;
+  text-align: center;
+}
+
+#title {
+  font-family: "Denk One", sans-serif;
+  text-decoration: none;
+  text-align: center;
+  font-size: 7em;
+  font-style: italic;
+  letter-spacing: 0.2em;
+  color: black;
+  margin: 0.5em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+#main-div {
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 98vh;
+  width: 100%;
+}
+
+#allFish {
+  margin: auto;
+  margin-bottom: 1em;
+  width: 90%;
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  align-items: flex-start;
+}
+
+#mainForm {
+  text-align: center;
+  flex-basis: 100%;
+  margin-bottom: 2em;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+#fishName {
+  width: 500px;
+  max-width: 80%;
+  font-size: 2em;
+  background-color: #a5b2c480;
+  padding: 0.2em 0.5em;
+  border-radius: 20px;
+}
+
+/************************Slider************************/
+
+#mainForm > label {
+  margin-top: 1em;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+#proteinSlider {
+  -webkit-appearance: none;
+  flex-basis: 100%;
+  width: 300px;
+  max-width: 50%;
+  margin-left: 2em;
+  margin-right: 2em;
+  position: relative;
+  bottom: 0.5em;
+  background: transparent;
+  cursor: pointer;
+}
+
+#proteinSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -14px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+#proteinSlider::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+#proteinSlider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #a5b2c480;
+  border-radius: 3px;
+  border: 0.2px solid #010101;
+}
+
+#proteinSlider:hover::-webkit-slider-runnable-track {
+  background: #a5b2c4ff;
+}
+
+#proteinSlider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #a5b2c480;
+  border-radius: 3px;
+  border: 0.2px solid #010101;
+}
+
+#proteinSlider:hover::-webkit-slider-runnable-track {
+  background: #a5b2c4ff;
+}
+
+/******************************************************/
+
+.fish-section {
+  padding: 1em;
+  margin: 2em;
+  background-color: #a5b2c480;
+  border-radius: 10%;
+  margin-bottom: 3em;
+  text-decoration: none;
+}
+
+.fish-section:hover {
+  background-color: #a5b2c4;
+}
+
+.fish-section > h2 {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-size: 2em;
+  text-align: center;
+  color: black;
+}
+
+.fish-section > h3 {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 400px;
+  margin-top: 0;
+  margin-bottom: 2em;
+  font-size: 1.2em;
+  color: rgb(100, 100, 100);
+  text-align: center;
+  text-decoration: none;
+}
+
+.fish-section > img {
+  width: 300px;
+  display: block;
+  margin: 10px auto 10px;
+}
+
+/******************************************************/
+
+#loading {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+#loading > h2 {
+  font-size: 3em;
+}
+
+@keyframes swim {
+  0% {
+    left: 0;
+  }
+
+  25% {
+    left: 200px;
+  }
+
+  75% {
+    left: -200px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+#loading > svg {
+  width: 200px;
+  position: relative;
+  animation-name: swim;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+/******************************************************/
+
+#details-main {
+  width: 90%;
+  margin: 0 auto 4em;
+  padding-bottom: 2em;
+  background-color: #a5b2c4a0;
+  border-radius: 2em;
+  text-align: center;
+}
+
+#back-container {
+  padding-top: 1em;
+  padding-left: 2em;
+  text-align: left;
+  font-weight: 700;
+}
+
+#back {
+  font-size: 2em;
+  color: black;
+  text-decoration: none;
+}
+
+#back:hover {
+  text-decoration: underline;
+}
+
+#details-main > h2 {
+  margin: -0.5em 0 0;
+  font-size: 4em;
+  font-style: italic;
+}
+
+#details-main > h3 {
+  margin: 0 2em 0;
+  font-size: 2em;
+  color: rgb(100, 100, 100);
+  font-style: italic;
+}
+
+#details-main > h4 {
+  margin: 0.5em 2em 0;
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+#details-img {
+  padding: 2em;
+  width: 50%;
+  float: right;
+}
+
+#details-main > article {
+  padding: 0 3em 0;
+  font-size: 1.5em;
+  text-align: left;
+  font-family: "Roboto Slab", serif;
+}
+
+#details-main h5 {
+  margin: 0 1em 0;
+  font-size: 1.5em;
+}
+
+#details-main ul {
+  padding: 0;
+  list-style-image: url(/favicon.26242483.ico);
+  list-style-position: inside;
+}
+
+#details-main hr {
+  margin: 0;
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+#details-main button {
+  background-color: inherit;
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  width: fit-content;
+}
+
+#details-main button > h5 {
+  margin: 0;
+}
+
+#details-nutrition {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+#details-nutrition > li {
+  margin: 0 2em 1em;
+  width: fit-content;
+}
+
+.details-gallery {
+  margin: 2em 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.details-gallery > img {
+  max-width: 50%;
+  border-radius: 1em;
+  margin-right: 2em;
+}
+
+#close {
+  clear: both;
+}
+
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
