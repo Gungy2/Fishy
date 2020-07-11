@@ -7,12 +7,12 @@ import Details from "./Details.jsx";
 function App() {
   return (
     <div id="main-div">
-      <Link to="/" id="title">
+      <Link to="/FiFish" id="title">
         FiFish
       </Link>
       <Router>
-        <Details path="species/:name" />
-        <AllFish path="/" />
+        <Details path="/FiFish/species/:name" />
+        <AllFish path="/FiFish" />
       </Router>
       <footer>
         © George Ungureanu Vranceanu. Made with FishWatch.gov API
