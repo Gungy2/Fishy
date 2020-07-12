@@ -363,11 +363,10 @@ h6 {
 }
 
 @media only screen and (max-width: 600px) {
-
   body {
     font-size: 0.5em;
   }
-  
+
   footer {
     bottom: 0;
     font-size: 1em;
@@ -402,26 +401,25 @@ h6 {
   #mainForm > label {
     font-size: 2em;
   }
-  
-  
+
   @keyframes swim-small {
     0% {
       left: 0;
     }
-  
+
     25% {
       left: 100px;
     }
-  
+
     75% {
       left: -100px;
     }
-  
+
     100% {
       left: 0;
     }
   }
-  
+
   #loading > svg {
     width: 100px;
     animation-name: swim-small;
@@ -460,5 +458,4 @@ h6 {
     margin: 0 1em 0;
     font-size: 1.5em;
   }
-
 }

@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/Gungy2/FiFish/issues"
   },
-  "homepage": "http://gungy2.github.io/FiFish",
+  "homepage": "/FiFish/",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.4.0",

@@ -38,7 +38,7 @@ function Details({ name }) {
   return (
     <main id="details-main">
       <div id="back-container">
-        <Link id="back" to="/">
+        <Link id="back" to="/FiFish/">
           &lt;Back
         </Link>
       </div>
@@ -143,17 +143,24 @@ function Details({ name }) {
         <div style={{ display: food ? "inherit" : "none" }}>
           <ul id="details-food">
             <li>
-              Taste: {fish["Taste"].replace(/<.*?>/g, "").replace(/&.*?;/g, "")}
+              Taste:{" "}
+              {fish["Taste"]
+                ? fish["Taste"].replace(/<.*?>/g, "").replace(/&.*?;/g, "")
+                : "-"}
             </li>
             <li>
               Texture:{" "}
-              {fish["Texture"].replace(/<.*?>/g, "").replace(/&.*?;/g, "")}
+              {fish["Texture"]
+                ? fish["Texture"].replace(/<.*?>/g, "").replace(/&.*?;/g, "")
+                : "-"}
             </li>
             <li>
               Health Benefits:{" "}
               {fish["Health Benefits"]
-                .replace(/<.*?>/g, "")
-                .replace(/&.*?;/g, "")}
+                ? fish["Health Benefits"]
+                    .replace(/<.*?>/g, "")
+                    .replace(/&.*?;/g, "")
+                : "-"}
             </li>
           </ul>
         </div>

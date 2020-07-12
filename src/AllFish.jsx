@@ -7,7 +7,7 @@ function AllFish() {
   const [fish, setFish] = useState([]);
   const [name, setName] = useState("");
   const [currFish, setCurrFish] = useState([]);
-  const [minProt, setMinProt] = useState(10);
+  const [minProt, setMinProt] = useState(8);
 
   useEffect(() => {
     const url =
@@ -70,7 +70,7 @@ function AllFish() {
             onChange={(e) => {
               setMinProt(e.target.value);
             }}
-            min="10"
+            min="8"
             max="30"
             value={minProt}
             className="slider"
