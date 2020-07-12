@@ -142,9 +142,19 @@ function Details({ name }) {
         <hr />
         <div style={{ display: food ? "inherit" : "none" }}>
           <ul id="details-food">
-            <li>Taste: {fish["Taste"].replace(/<.*?>/g, "")}</li>
-            <li>Texture: {fish["Texture"].replace(/<.*?>/g, "")}</li>
-            <li>Health Benefits: {fish["Health Benefits"].replace(/<.*?>/g, "")}</li>
+            <li>
+              Taste: {fish["Taste"].replace(/<.*?>/g, "").replace(/&.*?;/g, "")}
+            </li>
+            <li>
+              Texture:{" "}
+              {fish["Texture"].replace(/<.*?>/g, "").replace(/&.*?;/g, "")}
+            </li>
+            <li>
+              Health Benefits:{" "}
+              {fish["Health Benefits"]
+                .replace(/<.*?>/g, "")
+                .replace(/&.*?;/g, "")}
+            </li>
           </ul>
         </div>
 

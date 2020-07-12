@@ -6,10 +6,11 @@ function Fish({
     "Species Name": name,
     "Scientific Name": scName,
     "Species Illustration Photo": media,
+    Path: path,
   },
 }) {
   return (
-    <Link to={"/species/" + name.toLowerCase().replace(/ /g, "-")} className="fish-section">
+    <Link to={path.replace(/profiles/, "species")} className="fish-section">
       <h2>{name}</h2>
       <h3>{scName}</h3>
       <img className="fish-img" src={media.src} alt={media.alt} />

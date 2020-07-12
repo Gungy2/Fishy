@@ -30974,9 +30974,10 @@ function Fish(_ref) {
   var _ref$species = _ref.species,
       name = _ref$species["Species Name"],
       scName = _ref$species["Scientific Name"],
-      media = _ref$species["Species Illustration Photo"];
+      media = _ref$species["Species Illustration Photo"],
+      path = _ref$species.Path;
   return /*#__PURE__*/_react.default.createElement(_router.Link, {
-    to: "/species/" + name.toLowerCase().replace(/ /g, "-"),
+    to: path.replace(/profiles/, "species"),
     className: "fish-section"
   }, /*#__PURE__*/_react.default.createElement("h2", null, name), /*#__PURE__*/_react.default.createElement("h3", null, scName), /*#__PURE__*/_react.default.createElement("img", {
     className: "fish-img",
@@ -31329,7 +31330,7 @@ function Details(_ref) {
     }
   }, /*#__PURE__*/_react.default.createElement("ul", {
     id: "details-food"
-  }, /*#__PURE__*/_react.default.createElement("li", null, "Taste: ", fish["Taste"].replace(/<.*?>/g, "")), /*#__PURE__*/_react.default.createElement("li", null, "Texture: ", fish["Texture"].replace(/<.*?>/g, "")), /*#__PURE__*/_react.default.createElement("li", null, "Health Benefits: ", fish["Health Benefits"].replace(/<.*?>/g, "")))), /*#__PURE__*/_react.default.createElement("button", {
+  }, /*#__PURE__*/_react.default.createElement("li", null, "Taste: ", fish["Taste"].replace(/<.*?>/g, "").replace(/&.*?;/g, "")), /*#__PURE__*/_react.default.createElement("li", null, "Texture:", " ", fish["Texture"].replace(/<.*?>/g, "").replace(/&.*?;/g, "")), /*#__PURE__*/_react.default.createElement("li", null, "Health Benefits:", " ", fish["Health Benefits"].replace(/<.*?>/g, "").replace(/&.*?;/g, "")))), /*#__PURE__*/_react.default.createElement("button", {
     onClick: function onClick() {
       setNutrition(!nutrition);
     },
@@ -31425,7 +31426,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37223" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39885" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
